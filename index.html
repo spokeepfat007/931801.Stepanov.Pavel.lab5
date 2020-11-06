@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Frontend task №6</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+<div class="content">
+    <h2>Новость 1</h2>
+    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Beatae voluptatum suscipit sed delectus facere veritatis
+    autem
+    quisquam unde nam doloribus?
+    <div>
+        <button type="button" class="btn" onclick="show('new1')">Открыть всплывающее окно</button>
+    </div>
+</div>
+<div class="content">
+    <h2>Новость 2</h2>
+    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Beatae voluptatum suscipit sed delectus facere veritatis
+    autem
+    quisquam unde nam doloribus?
+    <div>
+        <button type="button" class="btn" onclick="show('new2')">Открыть всплывающее окно</button>
+    </div>
+</div>
+<div class="content">
+    <h2>Новость 3</h2>
+    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Beatae voluptatum suscipit sed delectus facere veritatis
+    autem
+    quisquam unde nam doloribus?
+    <div>
+        <button type="button" class="btn" onclick="show('new3')">Открыть всплывающее окно</button>
+    </div>
+</div>
+<section class="new" id="new1">
+    <h1> Новость 1</h1>
+    <p>Новость 1: Lorem ipsum dolor sit amet consectetur adipisicing elit. A alias.</p>
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam hic, ipsa, ullam, cupiditate eveniet at
+        voluptate corrupti commodi nobis ratione voluptatem! Vel animi totam cupiditate doloribus ad ab exercitationem
+        officia eveniet impedit? Deleniti quasi nisi consectetur perspiciatis quibusdam nostrum, enim perferendis nam,
+        magni molestias recusandae id libero vitae, repudiandae praesentium.</p>
+</section>
+<section class="new" id="new2">
+    <h1> Новость 2</h1>
+    <p>Новость 2: Lorem ipsum dolor sit amet consectetur adipisicing elit. A alias.</p>
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam hic, ipsa, ullam, cupiditate eveniet at
+        voluptate corrupti commodi nobis ratione voluptatem! Vel animi totam cupiditate doloribus ad ab exercitationem
+        officia eveniet impedit? Deleniti quasi nisi consectetur perspiciatis quibusdam nostrum, enim perferendis nam,
+        magni molestias recusandae id libero vitae, repudiandae praesentium.</p>
+</section>
+<section class="new" id="new3">
+    <h1> Новость 3</h1>
+    <p>Новость 3: Lorem ipsum dolor sit amet consectetur adipisicing elit. A alias.</p>
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam hic, ipsa, ullam, cupiditate eveniet at
+        voluptate corrupti commodi nobis ratione voluptatem! Vel animi totam cupiditate doloribus ad ab exercitationem
+        officia eveniet impedit? Deleniti quasi nisi consectetur perspiciatis quibusdam nostrum, enim perferendis nam,
+        magni molestias recusandae id libero vitae, repudiandae praesentium.</p>
+</section>
+<div class="paint">
+
+</div>
+<script>
+    const paint = document.querySelector('.paint');
+
+    document.ondblclick = function () {
+        if (event.target.className == 'paint') {
+            paint.style.display = 'none';
+            const news = Array.from(document.getElementsByClassName('new'));
+            for(var i = 0; i<news.length; i++){
+                news[i].style.display = 'none';
+            }
+            }
+    };
+    function show(e) {
+        document.getElementById(e).style.display = 'block';
+        document.querySelector('.paint').style.display = 'block';
+    }
+</script>
+</body>
+</html>

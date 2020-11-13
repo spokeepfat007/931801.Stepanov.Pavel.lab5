@@ -60,25 +60,9 @@
         officia eveniet impedit? Deleniti quasi nisi consectetur perspiciatis quibusdam nostrum, enim perferendis nam,
         magni molestias recusandae id libero vitae, repudiandae praesentium.</p>
 </section>
-<div class="paint">
-
-</div>
-<script>
-    const paint = document.querySelector('.paint');
-
-    document.ondblclick = function () {
-        if (event.target.className == 'paint') {
-            paint.style.display = 'none';
-            const news = Array.from(document.getElementsByClassName('new'));
-            for(var i = 0; i<news.length; i++){
-                news[i].style.display = 'none';
-            }
-            }
-    };
-    function show(e) {
-        document.getElementById(e).style.display = 'block';
-        document.querySelector('.paint').style.display = 'block';
-    }
-</script>
+<div class="paint"></div>
+<input type="text">
+<input type="text">
+<script src="js/index.js"></script>
 </body>
 </html>

@@ -1,4 +1,4 @@
-document.ondblclick = () => {
+document.onclick = () => {
     if (event.target.className === 'paint') {
         const paint = document.querySelector('.paint');
         paint.style.display = 'none';
